@@ -63,6 +63,66 @@
           "name": "Baba Yaga"
         }
       ]
+    },
+    {
+      "user": {
+        "id": "123abc",
+        "name": "Artie Michaels"
+      },
+      "id": 525596,
+      "category": "sustainability",
+      "title": "Test1",
+      "description": "",
+      "date": "",
+      "time": "",
+      "location": "",
+      "attendees": []
+    },
+    {
+      "user": {
+        "id": "123abc",
+        "name": "Artie Michaels"
+      },
+      "id": 894967,
+      "category": "food",
+      "title": "ads",
+      "description": "asd",
+      "date": "2020-08-03T10:05:00.000Z",
+      "time": "16:00",
+      "location": "",
+      "attendees": []
+    },
+    {
+      "user": {
+        "id": "123abc",
+        "name": "Artie Michaels"
+      },
+      "id": 371714,
+      "category": "sustainability",
+      "title": "asd",
+      "description": "",
+      "date": "",
+      "time": "",
+      "location": "",
+      "attendees": []
+    },
+    {
+      "user": {
+        "id": "123abc",
+        "name": "Artie Michaels"
+      },
+      "id": 843601,
+      "organizer": {
+        "id": "123abc",
+        "name": "Artie Michaels"
+      },
+      "category": "recreation",
+      "title": "ads",
+      "description": "asd",
+      "date": "2020-08-04T10:07:00.000Z",
+      "time": "18:00",
+      "location": "",
+      "attendees": []
     }
   ]
 }

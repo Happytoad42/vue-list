@@ -1,3 +1,98 @@
 <template>
-  <h1>Event Create</h1>
+  <div>
+    <h1>Create an event, {{ user.name }}</h1>
+    <form @submit.prevent="createEvent">
+      <label>Select a category</label>
+      <select v-model="event.category">
+        <option v-for="cat in categories" :key="cat">{{ cat }}</option>
+      </select>
+      <h3>Name and describe your event</h3>
+      <div class="field">
+        <label>Title</label>
+        <input
+          v-model="event.title"
+          type="text"
+          placeholder="Add an event title"
+        />
+      </div>
+      <div class="field">
+        <label>Description</label>
+        <input
+          v-model="event.description"
+          type="text"
+          placeholder="Add a description"
+        />
+      </div>
+      <h3>When is your event?</h3>
+      <div class="field">
+        <label>Date</label>
+        <DatePicker v-model="event.date" placeholder="Select a date" />
+      </div>
+      <div class="field">
+        <label>Select a time</label>
+        <select v-model="event.time">
+          <option v-for="time in times" :key="time">{{ time }}</option>
+        </select>
+      </div>
+      <input type="submit" class="button -fill-gradient" value="Submit" />
+    </form>
+  </div>
 </template>
+
+<script>
+import DatePicker from 'vuejs-datepicker'
+
+export default {
+  components: {
+    DatePicker
+  },
+  data() {
+    const times = []
+    for (let i = 1; i < 24; i++) {
+      times.push(i.toString().padStart(2, '0') + ':00')
+    }
+    return {
+      times,
+      user: this.$store.state.user,
+      categories: this.$store.state.categories,
+      event: this.createNewEventObject()
+    }
+  },
+  methods: {
+    createEvent() {
+      this.$store.dispatch('createEvent', this.event)
+        .then(() => {
+          this.$router.push({
+            name: 'event-show',
+            params: { id: this.event.id }
+          })
+          this.event = this.createNewEventObject()
+        })
+        .catch(() => console.log('There was an error adding the event'))
+    },
+    createNewEventObject() {
+      const user = this.$store.state.user
+      const id = Math.floor(Math.random() * 1000000)
+
+      return {
+        user,
+        id,
+        organizer: user,
+        category: '',
+        title: '',
+        description: '',
+        date: '',
+        time: '',
+        location: '',
+        attendees: []
+      }
+    }
+  }
+}
+</script>
+
+<style scoped>
+.field {
+  margin-bottom: 24px;
+}
+</style>

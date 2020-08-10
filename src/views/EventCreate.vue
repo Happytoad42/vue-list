@@ -53,14 +53,15 @@ export default {
     }
     return {
       times,
-      user: this.$store.state.user.user,
+      user: this.$store.state.user,
       categories: this.$store.state.categories,
       event: this.createNewEventObject()
     }
   },
   methods: {
     createEvent() {
-      this.$store.dispatch('createEvent', this.event)
+      this.$store
+        .dispatch('event/createEvent', this.event)
         .then(() => {
           this.$router.push({
             name: 'event-show',
@@ -68,10 +69,12 @@ export default {
           })
           this.event = this.createNewEventObject()
         })
-        .catch(() => console.log('There was an error adding the event'))
+        .catch(err => {
+          console.log(err)
+        })
     },
     createNewEventObject() {
-      const user = this.$store.state.user.user.name
+      const user = this.$store.state.user
       const id = Math.floor(Math.random() * 1000000)
 
       return {

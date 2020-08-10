@@ -53,7 +53,7 @@ export default {
     }
     return {
       times,
-      user: this.$store.state.user,
+      user: this.$store.state.user.user,
       categories: this.$store.state.categories,
       event: this.createNewEventObject()
     }
@@ -71,7 +71,7 @@ export default {
         .catch(() => console.log('There was an error adding the event'))
     },
     createNewEventObject() {
-      const user = this.$store.state.user
+      const user = this.$store.state.user.user.name
       const id = Math.floor(Math.random() * 1000000)
 
       return {

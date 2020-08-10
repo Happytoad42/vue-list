@@ -65,64 +65,136 @@
       ]
     },
     {
-      "user": {
-        "id": "123abc",
-        "name": "Artie Michaels"
-      },
-      "id": 525596,
-      "category": "sustainability",
-      "title": "Test1",
-      "description": "",
-      "date": "",
-      "time": "",
-      "location": "",
-      "attendees": []
+      "id": 4,
+      "category": "animal welfare",
+      "organizer": "Chloe",
+      "title": "Tubby scratcher",
+      "description": "Woops!",
+      "location": "Tummba Town",
+      "date": "2019-01-03T21:54:00.000Z",
+      "time": "2:00",
+      "attendees": [
+        {
+          "id": "001",
+          "name": "Ivan Durak"
+        },
+        {
+          "id": "002",
+          "name": "Tsar Goroh"
+        }
+      ]
     },
     {
-      "user": {
-        "id": "123abc",
-        "name": "Artie Michaels"
-      },
-      "id": 894967,
-      "category": "food",
-      "title": "ads",
-      "description": "asd",
-      "date": "2020-08-03T10:05:00.000Z",
-      "time": "16:00",
-      "location": "",
-      "attendees": []
-    },
-    {
-      "user": {
-        "id": "123abc",
-        "name": "Artie Michaels"
-      },
-      "id": 371714,
-      "category": "sustainability",
-      "title": "asd",
-      "description": "",
-      "date": "",
-      "time": "",
-      "location": "",
-      "attendees": []
-    },
-    {
-      "user": {
-        "id": "123abc",
-        "name": "Artie Michaels"
-      },
-      "id": 843601,
-      "organizer": {
-        "id": "123abc",
-        "name": "Artie Michaels"
-      },
+      "id": 5,
       "category": "recreation",
-      "title": "ads",
-      "description": "asd",
-      "date": "2020-08-04T10:07:00.000Z",
-      "time": "18:00",
-      "location": "",
-      "attendees": []
-    }
+      "organizer": "Seth",
+      "title": "Crab party",
+      "description": "Boom!",
+      "location": "Crab basket",
+      "date": "2019-01-31T22:09:00.000Z",
+      "time": "7:00",
+      "attendees": [
+        {
+          "id": "003",
+          "name": "Vasilisa Premudraya"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "nature",
+      "organizer": "Lolita",
+      "title": "Big Kahuna",
+      "description": "Fishy!",
+      "location": "Meramin av. ",
+      "date": "2019-02-02T23:27:00.000Z",
+      "time": "4:00",
+      "attendees": [
+        {
+          "id": "003",
+          "name": "Baba Yaga"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "nature",
+      "organizer": "Eve",
+      "title": "Simon stroller",
+      "description": "Stroll away!",
+      "location": "Strolltown",
+      "date": "2019-01-03T21:54:00.000Z",
+      "time": "2:00",
+      "attendees": [
+        {
+          "id": "001",
+          "name": "Ivan Durak"
+        },
+        {
+          "id": "002",
+          "name": "Tsar Goroh"
+        },
+        {
+          "id": "003",
+          "name": "Vasilisa Premudraya"
+        },
+        {
+          "id": "003",
+          "name": "Baba Yaga"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "animal welfare",
+      "organizer": "Kate",
+      "title": "Snail race",
+      "description": "Race track!",
+      "location": "Tum tum",
+      "date": "2019-01-31T22:09:00.000Z",
+      "time": "7:00",
+      "attendees": [
+        {
+          "id": "003",
+          "name": "Vasilisa Premudraya"
+        },
+        {
+          "id": "003",
+          "name": "Baba Yaga"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "animal welfare",
+      "organizer": "Sveta",
+      "title": "Roma Parade",
+      "description": "Ave!",
+      "location": "Rome ",
+      "date": "2019-02-02T23:27:00.000Z",
+      "time": "1:00",
+      "attendees": [
+        {
+          "id": "003",
+          "name": "Baba Yaga"
+        }
+      ]
+    },     
+    {
+      "id": 10,
+      "category": "animal welfare",
+      "organizer": "Ruslan",
+      "title": "Big guys dont cry",
+      "description": "Crying!",
+      "location": "The Village",
+      "date": "2019-02-02T23:27:00.000Z",
+      "time": "1:00",
+      "attendees": [
+        {
+          "id": "003",
+          "name": "Baba Yaga"
+        }
+      ]
+    }      
   ]
 }

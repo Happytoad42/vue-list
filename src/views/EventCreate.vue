@@ -41,6 +41,7 @@
 
 <script>
 import DatePicker from 'vuejs-datepicker'
+import NProgress from 'nprogress'
 
 export default {
   components: {
@@ -60,9 +61,11 @@ export default {
   },
   methods: {
     createEvent() {
+      NProgress.start()
       this.$store
         .dispatch('event/createEvent', this.event)
         .then(() => {
+          NProgress.done()
           this.$router.push({
             name: 'event-show',
             params: { id: this.event.id }
@@ -70,6 +73,7 @@ export default {
           this.event = this.createNewEventObject()
         })
         .catch(err => {
+          NProgress.done()
           console.log(err)
         })
     },

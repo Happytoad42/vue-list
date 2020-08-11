@@ -195,6 +195,42 @@
           "name": "Baba Yaga"
         }
       ]
+    },
+    {
+      "user": {
+        "id": "123abc",
+        "name": "Artie"
+      },
+      "id": 60074,
+      "organizer": {
+        "id": "123abc",
+        "name": "Artie"
+      },
+      "category": "education",
+      "title": "Puppy picnic",
+      "description": "",
+      "date": "",
+      "time": "",
+      "location": "",
+      "attendees": []
+    },
+    {
+      "user": {
+        "id": "123abc",
+        "name": "Artie"
+      },
+      "id": 300711,
+      "organizer": {
+        "id": "123abc",
+        "name": "Artie"
+      },
+      "category": "animals",
+      "title": "Puppy party!",
+      "description": "",
+      "date": "",
+      "time": "",
+      "location": "",
+      "attendees": []
     }
   ]
 }

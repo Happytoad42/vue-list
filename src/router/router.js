@@ -5,6 +5,7 @@ import EventShow from '../views/EventShow.vue'
 import EventCreate from '../views/EventCreate.vue'
 import NotFound from '../views/NotFound'
 import NetworkIssue from '../views/NetworkIssue'
+import Example from '../views/Example'
 
 import NProgress from 'nprogress'
 import store from '@/store/store'
@@ -37,6 +38,10 @@ const routes = [
           next({ name: 'network-issue' })
         })
     }
+  },
+  {
+    path: '/example',
+    component: Example
   },
   {
     path: '/event-create',

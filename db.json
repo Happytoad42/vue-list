@@ -231,6 +231,24 @@
       "time": "",
       "location": "",
       "attendees": []
+    },
+    {
+      "user": {
+        "id": "123abc",
+        "name": "Artie"
+      },
+      "id": 474894,
+      "organizer": {
+        "id": "123abc",
+        "name": "Artie"
+      },
+      "category": "",
+      "title": "Test",
+      "description": "",
+      "date": "",
+      "time": "",
+      "location": "",
+      "attendees": []
     }
   ]
 }

@@ -8,15 +8,11 @@
       v-model="email"
     />
     <div v-if="$v.email.$error">
-      <p v-if="!$v.email.email" class="errorMessage">
-        Please enter a valid email
-      </p>
+      <p v-if="!$v.email.email" class="errorMessage">Please enter a valid email</p>
       <p v-if="!$v.email.required" class="errorMessage">Email is required</p>
     </div>
     <button :disabled="$v.$invalid" type="submit">Submit</button>
-    <p v-if="$v.$anyError" class="errorMessage">
-      Please, fill out the required fields
-    </p>
+    <p v-if="$v.$anyError" class="errorMessage">Please, fill out the required fields</p>
   </form>
 </template>
 
@@ -41,6 +37,9 @@ export default {
         console.log('Form submitted', this.email)
       }
     }
+  },
+  created() {
+    console.log('Hello from component!')
   }
 }
 </script>

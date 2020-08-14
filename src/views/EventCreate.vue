@@ -10,9 +10,7 @@
         @blur="$v.event.category.$touch()"
       />
       <template v-if="$v.event.category.$error">
-        <p v-if="!$v.event.category.required" class="errorMessage">
-          Category is required.
-        </p>
+        <p v-if="!$v.event.category.required" class="errorMessage">Category is required.</p>
       </template>
 
       <h3>Name & describe your event</h3>
@@ -27,9 +25,7 @@
       />
 
       <template v-if="$v.event.title.$error">
-        <p v-if="!$v.event.title.required" class="errorMessage">
-          Title is required.
-        </p>
+        <p v-if="!$v.event.title.required" class="errorMessage">Title is required.</p>
       </template>
 
       <BaseInput
@@ -43,9 +39,7 @@
       />
 
       <template v-if="$v.event.description.$error">
-        <p v-if="!$v.event.description.required" class="errorMessage">
-          Description is required.
-        </p>
+        <p v-if="!$v.event.description.required" class="errorMessage">Description is required.</p>
       </template>
 
       <h3>Where is your event?</h3>
@@ -56,13 +50,10 @@
         placeholder="Location"
         class="field"
         :class="{ error: $v.event.location.$error }"
-        @blur="$v.event.location.$touch()"
       />
 
       <template v-if="$v.event.location.$error">
-        <p v-if="!$v.event.location.required" class="errorMessage">
-          Location is required.
-        </p>
+        <p v-if="!$v.event.location.required" class="errorMessage">Location is required.</p>
       </template>
 
       <h3>When is your event?</h3>
@@ -73,15 +64,8 @@
           @opened="$v.event.date.$touch()"
           v-model="event.date.$model"
           placeholder="Select a date"
-          :input-class="{ error: $v.event.date.$error }"
         />
       </div>
-
-      <template v-if="$v.event.date.$error">
-        <p v-if="!$v.event.date.required" class="errorMessage">
-          Date is required.
-        </p>
-      </template>
 
       <BaseSelect
         label="Select a time"
@@ -93,20 +77,11 @@
       />
 
       <template v-if="$v.event.time.$error">
-        <p v-if="!$v.event.time.required" class="errorMessage">
-          Time is required.
-        </p>
+        <p v-if="!$v.event.time.required" class="errorMessage">Time is required.</p>
       </template>
 
-      <BaseButton
-        type="submit"
-        buttonClass="-fill-gradient"
-        :disabled="$v.$anyError"
-        >Submit</BaseButton
-      >
-      <p v-if="$v.$anyError" class="errorMessage">
-        Please fill out the required field(s).
-      </p>
+      <BaseButton type="submit" buttonClass="-fill-gradient" :disabled="$v.$anyError">Submit</BaseButton>
+      <p v-if="$v.$anyError" class="errorMessage">Please fill out the required field(s).</p>
     </form>
   </div>
 </template>
@@ -137,10 +112,6 @@ export default {
       title: { required },
       description: { required },
       location: { required },
-      date: {
-        required,
-        minValue: value => value > new Date().toISOString()
-      },
       time: { required }
     }
   },
@@ -175,7 +146,7 @@ export default {
         title: '',
         description: '',
         location: '',
-        date: null,
+        date: '',
         time: '',
         attendees: []
       }

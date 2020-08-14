@@ -249,6 +249,16 @@
       "time": "",
       "location": "",
       "attendees": []
+    },
+    {
+      "id": 525459,
+      "category": "food",
+      "title": "Food test",
+      "description": "Test",
+      "location": "Test location",
+      "date": "",
+      "time": "15:00",
+      "attendees": []
     }
   ]
 }
